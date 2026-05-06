@@ -13,6 +13,17 @@
       rel="stylesheet"
     />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Prevent flash of wrong theme: apply data-theme before Angular boots -->
+    <script>
+      (function () {
+        var stored = localStorage.getItem('hc-theme');
+        var valid = ['light', 'dark', 'system'];
+        document.documentElement.setAttribute(
+          'data-theme',
+          valid.includes(stored) ? stored : 'system',
+        );
+      })();
+    </script>
   </head>
   <body>
     <app-root></app-root>

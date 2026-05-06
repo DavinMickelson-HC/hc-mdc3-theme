@@ -1,0 +1,70 @@
+// =============================================================================
+// Elevation — MDC 3 tonal-surface system
+// =============================================================================
+//
+// MDC 3 replaces shadow-only elevation with *surface tint*: the primary colour
+// is overlaid at increasing opacity as surfaces "rise". Subtle box-shadows are
+// still used for additional depth cues.
+//
+//   Level  │  dp  │  Tint opacity
+//   ───────┼──────┼──────────────
+//     0    │   0  │  0 %     (flat / background)
+//     1    │   1  │  5 %     (cards at rest)
+//     2    │   3  │  8 %     (buttons, chips at rest)
+//     3    │   6  │ 11 %     (dialogs)
+//     4    │   8  │ 12 %     (FABs)
+//     5    │  12  │ 14 %     (navigation drawers)
+// =============================================================================
+
+// ── Emit CSS custom-property tokens ──────────────────────────────────────────
+// Call once on html / :root via styles.scss.
+@mixin emit-elevation-tokens() {
+  // Box-shadow layers (MDC 3 shadow specification)
+  --hc-elevation-0: none;
+  --hc-elevation-1: 0 1px 2px 0 rgb(0 0 0 / 30%), 0 1px 3px 1px rgb(0 0 0 / 15%);
+  --hc-elevation-2: 0 1px 2px 0 rgb(0 0 0 / 30%), 0 2px 6px 2px rgb(0 0 0 / 15%);
+  --hc-elevation-3: 0 4px 8px 3px rgb(0 0 0 / 15%), 0 1px 3px 0 rgb(0 0 0 / 30%);
+  --hc-elevation-4: 0 6px 10px 4px rgb(0 0 0 / 15%), 0 2px 3px 0 rgb(0 0 0 / 30%);
+  --hc-elevation-5: 0 8px 12px 6px rgb(0 0 0 / 15%), 0 4px 4px 0 rgb(0 0 0 / 30%);
+
+  // Primary tint overlay opacity per level
+  --hc-elevation-tint-0: 0;
+  --hc-elevation-tint-1: 0.05;
+  --hc-elevation-tint-2: 0.08;
+  --hc-elevation-tint-3: 0.11;
+  --hc-elevation-tint-4: 0.12;
+  --hc-elevation-tint-5: 0.14;
+}
+
+// ── Mixin: apply tonal elevation to a surface element ────────────────────────
+// The host element MUST have `position: relative` and `overflow: hidden`.
+// @param {Number} $level  0–5
+@mixin surface-elevation($level: 0) {
+  box-shadow: var(--hc-elevation-#{$level});
+
+  // A pseudo-element carries the primary-colour tint so it never clips content.
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background-color: var(--mat-sys-primary);
+    opacity: var(--hc-elevation-tint-#{$level});
+    transition: opacity var(--hc-duration-medium-2, 300ms)
+      var(--hc-easing-standard, cubic-bezier(0.2, 0, 0, 1));
+  }
+}
+
+// ── Utility classes — .hc-surface-{0-5} ──────────────────────────────────────
+// Pair with a background-color from the MDC 3 colour roles, e.g.:
+//   background-color: var(--mat-sys-surface-container);
+@mixin emit-surface-utilities() {
+  @for $level from 0 through 5 {
+    .hc-surface-#{$level} {
+      position: relative;
+      overflow: hidden;
+      @include surface-elevation($level);
+    }
+  }
+}

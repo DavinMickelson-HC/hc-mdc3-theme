@@ -1,0 +1,113 @@
+// =============================================================================
+// Component-level theme mixins
+// =============================================================================
+//
+// Use these in component .scss files. Because angular.json sets
+// stylePreprocessorOptions.includePaths to ["src"], import with:
+//
+//   @use 'styles/components' as hc;
+//
+//   :host {
+//     @include hc.card-surface(2);
+//   }
+// =============================================================================
+
+@use './elevation' as elev;
+
+// ── Card surface ──────────────────────────────────────────────────────────────
+// @param {Number} $elevation  0–5  (default 1)
+@mixin card-surface($elevation: 1) {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--mat-sys-surface-container);
+  border-radius: var(--hc-shape-medium);
+  padding: var(--hc-spacing-4);
+  @include elev.surface-elevation($elevation);
+}
+
+// ── Chip / badge ──────────────────────────────────────────────────────────────
+// @param {String} $role  MDC 3 colour role: primary | secondary | tertiary | error
+@mixin chip($role: secondary) {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--hc-spacing-2);
+  padding: var(--hc-spacing-1) var(--hc-spacing-3);
+  border-radius: var(--hc-shape-full);
+  background-color: var(--mat-sys-#{$role}-container);
+  color: var(--mat-sys-on-#{$role}-container);
+  font: var(--mat-sys-label-large);
+}
+
+// ── List item ─────────────────────────────────────────────────────────────────
+@mixin list-item() {
+  display: flex;
+  align-items: center;
+  gap: var(--hc-spacing-4);
+  padding: var(--hc-spacing-3) var(--hc-spacing-4);
+  min-height: 3rem;
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-large);
+  transition: background-color var(--hc-duration-short-4, 200ms)
+    var(--hc-easing-standard, cubic-bezier(0.2, 0, 0, 1));
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--mat-sys-on-surface) 8%, transparent);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--mat-sys-primary);
+    outline-offset: -2px;
+  }
+}
+
+// ── Page / section layout helpers ─────────────────────────────────────────────
+@mixin page-container() {
+  max-width: 75rem;
+  margin-inline: auto;
+  padding-inline: var(--hc-spacing-6);
+}
+
+@mixin section-gap($size: 8) {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hc-spacing-#{$size});
+}
+
+// ── Focus ring (WCAG 2.4.11 compliant) ───────────────────────────────────────
+@mixin focus-ring() {
+  &:focus-visible {
+    outline: 3px solid var(--mat-sys-primary);
+    outline-offset: 2px;
+  }
+}
+
+// ── MDC 3 state layer ─────────────────────────────────────────────────────────
+// Overlays the on-surface colour at the MDC 3 state opacities.
+// The host must be `position: relative`.
+// @param {String} $role  MDC 3 colour role for the state layer (default: on-surface)
+@mixin state-layer($role: on-surface) {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background-color: var(--mat-sys-#{$role});
+    opacity: 0;
+    transition: opacity var(--hc-duration-short-3, 150ms)
+      var(--hc-easing-standard, cubic-bezier(0.2, 0, 0, 1));
+  }
+
+  &:hover::after {
+    opacity: 0.08;
+  }
+  &:focus::after {
+    opacity: 0.1;
+  }
+  &:active::after {
+    opacity: 0.12;
+  }
+}

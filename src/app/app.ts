@@ -1,12 +1,30 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { ThemeService } from './core/services/theme.service';
+import { ThemeSwitcherComponent } from './shared/components/theme-switcher/theme-switcher';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [
+    MatToolbarModule,
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDividerModule,
+    MatChipsModule,
+    ThemeSwitcherComponent,
+  ],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
-  protected readonly title = signal('hc-mdc3-theme');
+  // Injecting ThemeService here ensures it initialises (and reads localStorage)
+  // before the first render, preventing a flash of the wrong theme.
+  protected readonly themeService = inject(ThemeService);
 }

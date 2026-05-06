@@ -1,0 +1,91 @@
+// App-shell layout
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--hc-spacing-4);
+  position: sticky;
+  top: 0;
+  z-index: var(--hc-z-sticky);
+}
+
+.toolbar-title {
+  font: var(--mat-sys-title-large);
+  letter-spacing: var(--mat-sys-title-large-letter-spacing);
+}
+
+.app-main {
+  flex: 1;
+  padding: var(--hc-spacing-8) var(--hc-spacing-6);
+  max-width: 64rem;
+  margin-inline: auto;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--hc-spacing-10);
+}
+
+// ── Demo sections ─────────────────────────────────────────────────────────────
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hc-spacing-2);
+  margin-bottom: var(--hc-spacing-6);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: var(--hc-spacing-4);
+}
+
+.elevation-card {
+  background-color: var(--mat-sys-surface-container);
+  border-radius: var(--hc-shape-medium);
+  padding: var(--hc-spacing-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--hc-spacing-2);
+  align-items: flex-start;
+}
+
+.color-role-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: var(--hc-spacing-3);
+}
+
+.color-swatch {
+  border-radius: var(--hc-shape-small);
+  padding: var(--hc-spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--hc-spacing-1);
+  min-height: 5rem;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--hc-spacing-3);
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--hc-spacing-2);
+}
+
+.type-scale-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hc-spacing-3);
+}

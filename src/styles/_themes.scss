@@ -1,0 +1,54 @@
+// =============================================================================
+// Theme definitions — light & dark
+// =============================================================================
+//
+// To re-brand the entire application, swap the palette variables below.
+// Available built-in palettes (prefix with mat.$):
+//   red  pink  purple  violet  indigo  blue  light-blue  cyan  teal
+//   green  lime  yellow  orange  deep-orange  brown  grey  blue-grey
+//   azure  rose
+// =============================================================================
+
+@use '@angular/material' as mat;
+
+// ── Palette selection ─────────────────────────────────────────────────────────
+$primary-palette: mat.$violet-palette !default;
+$tertiary-palette: mat.$rose-palette !default;
+
+// ── Shared options ────────────────────────────────────────────────────────────
+$_typography: Roboto;
+$_density: 0;
+
+// ── Light theme ───────────────────────────────────────────────────────────────
+@mixin apply-light() {
+  color-scheme: light;
+
+  @include mat.theme(
+    (
+      color: (
+        primary: $primary-palette,
+        tertiary: $tertiary-palette,
+        theme-type: light,
+      ),
+      typography: $_typography,
+      density: $_density,
+    )
+  );
+}
+
+// ── Dark theme ────────────────────────────────────────────────────────────────
+@mixin apply-dark() {
+  color-scheme: dark;
+
+  @include mat.theme(
+    (
+      color: (
+        primary: $primary-palette,
+        tertiary: $tertiary-palette,
+        theme-type: dark,
+      ),
+      typography: $_typography,
+      density: $_density,
+    )
+  );
+}

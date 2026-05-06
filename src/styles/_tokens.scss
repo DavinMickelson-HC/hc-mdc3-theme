@@ -1,0 +1,83 @@
+// =============================================================================
+// Design Token Maps — MDC 3 extended custom tokens
+// =============================================================================
+//
+// All tokens are emitted as CSS custom properties via the `emit-*` mixins.
+// Call `emit-all()` once on the html/root element in styles.scss.
+//
+// Usage in components:
+//   padding: var(--hc-spacing-4);          // 16 px
+//   border-radius: var(--hc-shape-medium); // 12 px
+//   z-index: var(--hc-z-modal);            // 40
+// =============================================================================
+
+// ── Spacing (4-point grid) ────────────────────────────────────────────────────
+@mixin emit-spacing-tokens() {
+  --hc-spacing-0: 0;
+  --hc-spacing-1: 0.25rem; //  4 px
+  --hc-spacing-2: 0.5rem; //  8 px
+  --hc-spacing-3: 0.75rem; // 12 px
+  --hc-spacing-4: 1rem; // 16 px
+  --hc-spacing-5: 1.25rem; // 20 px
+  --hc-spacing-6: 1.5rem; // 24 px
+  --hc-spacing-8: 2rem; // 32 px
+  --hc-spacing-10: 2.5rem; // 40 px
+  --hc-spacing-12: 3rem; // 48 px
+  --hc-spacing-16: 4rem; // 64 px
+  --hc-spacing-20: 5rem; // 80 px
+  --hc-spacing-24: 6rem; // 96 px
+}
+
+// ── Shape / border-radius (MDC 3 shape scale) ─────────────────────────────────
+@mixin emit-shape-tokens() {
+  --hc-shape-none: 0;
+  --hc-shape-extra-small: 0.25rem; //  4 px
+  --hc-shape-small: 0.5rem; //  8 px
+  --hc-shape-medium: 0.75rem; // 12 px
+  --hc-shape-large: 1rem; // 16 px
+  --hc-shape-extra-large: 1.75rem; // 28 px
+  --hc-shape-full: 624.9375rem; // pill / circle
+}
+
+// ── Z-index scale ─────────────────────────────────────────────────────────────
+@mixin emit-z-index-tokens() {
+  --hc-z-below: -1;
+  --hc-z-base: 0;
+  --hc-z-raised: 1;
+  --hc-z-dropdown: 10;
+  --hc-z-sticky: 20;
+  --hc-z-overlay: 30;
+  --hc-z-modal: 40;
+  --hc-z-toast: 50;
+}
+
+// ── Motion / easing (MDC 3 motion spec) ───────────────────────────────────────
+@mixin emit-motion-tokens() {
+  // Duration ramp
+  --hc-duration-short-1: 50ms;
+  --hc-duration-short-2: 100ms;
+  --hc-duration-short-3: 150ms;
+  --hc-duration-short-4: 200ms;
+  --hc-duration-medium-1: 250ms;
+  --hc-duration-medium-2: 300ms;
+  --hc-duration-medium-3: 350ms;
+  --hc-duration-medium-4: 400ms;
+  --hc-duration-long-1: 450ms;
+  --hc-duration-long-2: 500ms;
+
+  // Easing curves
+  --hc-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --hc-easing-standard-decel: cubic-bezier(0, 0, 0, 1);
+  --hc-easing-standard-accel: cubic-bezier(0.3, 0, 1, 1);
+  --hc-easing-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --hc-easing-emphasized-decel: cubic-bezier(0.05, 0.7, 0.1, 1);
+  --hc-easing-emphasized-accel: cubic-bezier(0.3, 0, 0.8, 0.15);
+}
+
+// ── Convenience: emit every custom token at once ──────────────────────────────
+@mixin emit-all() {
+  @include emit-spacing-tokens();
+  @include emit-shape-tokens();
+  @include emit-z-index-tokens();
+  @include emit-motion-tokens();
+}
