@@ -26,7 +26,7 @@
 }
 
 // ── Chip / badge ──────────────────────────────────────────────────────────────
-// @param {String} $role  MDC 3 colour role: primary | secondary | tertiary | error
+// @param {String} $role  MDC 3 color role: primary | secondary | tertiary | error
 @mixin chip($role: secondary) {
   display: inline-flex;
   align-items: center;
@@ -82,9 +82,9 @@
 }
 
 // ── MDC 3 state layer ─────────────────────────────────────────────────────────
-// Overlays the on-surface colour at the MDC 3 state opacities.
+// Overlays the on-surface color at the MDC 3 state opacities.
 // The host must be `position: relative`.
-// @param {String} $role  MDC 3 colour role for the state layer (default: on-surface)
+// @param {String} $role  MDC 3 color role for the state layer (default: on-surface)
 @mixin state-layer($role: on-surface) {
   position: relative;
   overflow: hidden;

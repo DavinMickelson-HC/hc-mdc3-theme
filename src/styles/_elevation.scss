@@ -2,7 +2,7 @@
 // Elevation — MDC 3 tonal-surface system
 // =============================================================================
 //
-// MDC 3 replaces shadow-only elevation with *surface tint*: the primary colour
+// MDC 3 replaces shadow-only elevation with *surface tint*: the primary color
 // is overlaid at increasing opacity as surfaces "rise". Subtle box-shadows are
 // still used for additional depth cues.
 //
@@ -42,7 +42,7 @@
 @mixin surface-elevation($level: 0) {
   box-shadow: var(--hc-elevation-#{$level});
 
-  // A pseudo-element carries the primary-colour tint so it never clips content.
+  // A pseudo-element carries the primary-color tint so it never clips content.
   &::before {
     content: '';
     position: absolute;
@@ -57,7 +57,7 @@
 }
 
 // ── Utility classes — .hc-surface-{0-5} ──────────────────────────────────────
-// Pair with a background-color from the MDC 3 colour roles, e.g.:
+// Pair with a background-color from the MDC 3 color roles, e.g.:
 //   background-color: var(--mat-sys-surface-container);
 @mixin emit-surface-utilities() {
   @for $level from 0 through 5 {

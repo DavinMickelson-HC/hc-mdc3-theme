@@ -17,7 +17,7 @@ import { ThemeService } from '../../../core/services/theme.service';
       [value]="themeService.mode()"
       (change)="themeService.setMode($event.value)"
       hideSingleSelectionIndicator
-      aria-label="Select colour theme"
+      aria-label="Select color theme"
     >
       <mat-button-toggle value="light" aria-label="Light theme" matTooltip="Light">
         <mat-icon aria-hidden="true">light_mode</mat-icon>

@@ -6,7 +6,7 @@ export type ThemeMode = 'light' | 'dark' | 'system';
 const STORAGE_KEY = 'hc-theme';
 
 /**
- * Manages the application colour-theme (light / dark / system preference).
+ * Manages the application color-theme (light / dark / system preference).
  *
  * Sets a `data-theme` attribute on `<html>` that the global stylesheet uses
  * to toggle between the light and dark `mat.theme()` blocks.
