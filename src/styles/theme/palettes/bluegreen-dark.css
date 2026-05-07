@@ -1,0 +1,51 @@
+/* ============================================================
+   Blue-Green — Dark Mode
+   ============================================================ */
+
+.bluegreen.dark {
+  /* Primary */
+  --hc-primary: #4fa3e3; /* Lightened Hennepin Blue */
+  --hc-on-primary: #000000;
+  --hc-primary-container: #00335f;
+  --hc-on-primary-container: #ffffff;
+
+  /* Secondary (Green) */
+  --hc-secondary: #b8e46a;
+  --hc-on-secondary: #000000;
+  --hc-secondary-container: #4f6a1a;
+  --hc-on-secondary-container: #ffffff;
+
+  /* Tertiary (Blue Accent) */
+  --hc-tertiary: #7cc6f0;
+  --hc-on-tertiary: #000000;
+  --hc-tertiary-container: #1f4a6b;
+  --hc-on-tertiary-container: #ffffff;
+
+  /* Error */
+  --hc-error: #ff7a8a;
+  --hc-on-error: #000000;
+  --hc-error-container: #7a0f1f;
+  --hc-on-error-container: #ffffff;
+
+  /* Surface / Background */
+  --hc-surface: #121212;
+  --hc-on-surface: #ffffff;
+
+  --hc-surface-variant: #3a3a3a;
+  --hc-on-surface-variant: #e0e0e0;
+
+  --hc-background: #121212;
+  --hc-on-background: #ffffff;
+
+  /* Outline / Shadow */
+  --hc-outline: #6f6f6f;
+  --hc-outline-variant: #3a3a3a;
+
+  --hc-shadow: rgba(0, 0, 0, 0.7);
+  --hc-scrim: rgba(0, 0, 0, 0.8);
+
+  /* Inverse */
+  --hc-inverse-surface: #e0e0e0;
+  --hc-inverse-on-surface: #000000;
+  --hc-inverse-primary: #44c8f5;
+}

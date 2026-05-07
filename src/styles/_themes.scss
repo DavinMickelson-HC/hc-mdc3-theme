@@ -12,11 +12,12 @@
 @use '@angular/material' as mat;
 
 // ── Palette selection ─────────────────────────────────────────────────────────
-$primary-palette: mat.$violet-palette !default;
-$tertiary-palette: mat.$rose-palette !default;
+$primary-palette: mat.$azure-palette !default;
+$secondary-palette: mat.$blue-palette !default;
+$tertiary-palette: mat.$cyan-palette !default;
 
 // ── Shared options ────────────────────────────────────────────────────────────
-$_typography: Roboto;
+$_typography: Satoshi;
 $_density: 0;
 
 // ── Light theme ───────────────────────────────────────────────────────────────

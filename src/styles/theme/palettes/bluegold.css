@@ -1,0 +1,51 @@
+/* ============================================================
+   Blue + Gold Palette
+   ============================================================ */
+
+.bluegold {
+  /* Primary */
+  --hc-primary: #0058a4; /* Hennepin Blue */
+  --hc-on-primary: #ffffff;
+  --hc-primary-container: #113c66;
+  --hc-on-primary-container: #ffffff;
+
+  /* Secondary (Gold) */
+  --hc-secondary: #ffcb05; /* Gold */
+  --hc-on-secondary: #000000;
+  --hc-secondary-container: #f7b500; /* Deeper ceremonial gold */
+  --hc-on-secondary-container: #000000;
+
+  /* Tertiary (Warm Red Accent) */
+  --hc-tertiary: #ce1432;
+  --hc-on-tertiary: #ffffff;
+  --hc-tertiary-container: #ef413d;
+  --hc-on-tertiary-container: #ffffff;
+
+  /* Error */
+  --hc-error: #ce1432;
+  --hc-on-error: #ffffff;
+  --hc-error-container: #ef413d;
+  --hc-on-error-container: #ffffff;
+
+  /* Surface / Background */
+  --hc-surface: #ffffff;
+  --hc-on-surface: #000000;
+
+  --hc-surface-variant: #bcbec0;
+  --hc-on-surface-variant: #000000;
+
+  --hc-background: #ffffff;
+  --hc-on-background: #000000;
+
+  /* Outline / Shadow */
+  --hc-outline: #bcbec0;
+  --hc-outline-variant: #d6d2ce;
+
+  --hc-shadow: rgba(0, 0, 0, 0.25);
+  --hc-scrim: rgba(0, 0, 0, 0.4);
+
+  /* Inverse */
+  --hc-inverse-surface: #000000;
+  --hc-inverse-on-surface: #ffffff;
+  --hc-inverse-primary: #44c8f5;
+}

@@ -1,0 +1,66 @@
+/* ============================================================
+   Hennepin County — Brand Color Tokens (Cleaned + Normalized)
+   ============================================================ */
+
+:root {
+  /* -------------------------
+     CORE BRAND COLORS
+     ------------------------- */
+
+  /* Deep Blue */
+  --hc-deep-blue: #113c66; /* Pantone 295 C */
+
+  /* Hennepin Blue */
+  --hc-blue: #0058a4; /* Pantone 293 C */
+
+  /* Bright Blue */
+  --hc-bright-blue: #44c8f5; /* Pantone 2985 C */
+
+  /* -------------------------
+     ACCENT COLORS
+     ------------------------- */
+
+  /* Green (Primary Accent) */
+  --hc-green: #9fcc3b; /* Pantone 2292 C */
+
+  /* Dark Emerald Green (Primary Accent - Alt) */
+  --hc-green-dark: #28a24a; /* Pantone 357 C
+
+  /* Light Green / Lime */
+  --hc-lime: #cbdb2a; /* Pantone 382 C */
+
+  /* Warm Red */
+  --hc-red: #ce1432; /* Pantone 186 C */
+
+  /* Warm Red (Bright) */
+  --hc-red-bright: #ef413d; /* Pantone 4058 C */
+
+  /* Golden Yellow */
+  --hc-yellow: #ffcb05; /* Pantone 116 C */
+
+  /* Soft Yellow */
+  --hc-yellow-soft: #feeb3c; /* Pantone 113 C */
+
+  /* Blue Accent (Alt) */
+  --hc-blue-accent: #369ddb; /* Pantone 2387 C */
+
+  /* Red Purple (Dark Accent) */
+  --hc-red-purple: #9b27b1; /* Pantone 2592 C */
+
+  /* Blue Accent (Deep) */
+  --hc-blue-accent-dark: #673ab8; /* Pantone 2090 C */
+
+  /* Green Accent (Alt) */
+  --hc-green-accent: #28a24a; /* Pantone 2426 C */
+
+  /* Blue Accent (Light) */
+  --hc-blue-accent-light: #f17bb0; /* Pantone 231 C */
+
+  /* -------------------------
+     NEUTRALS
+     ------------------------- */
+
+  --hc-white: #ffffff;
+  --hc-gray: #bcbec0;
+  --hc-black: #000000;
+}

@@ -1,0 +1,66 @@
+/* ============================================================
+   MDC3 Semantic Theme Mapping
+   This file NEVER changes — palettes override the hc-* tokens.
+   ============================================================ */
+
+:root {
+  /* ----------------------------------------------------------
+     PRIMARY
+     ---------------------------------------------------------- */
+  --md-sys-color-primary: var(--hc-primary);
+  --md-sys-color-on-primary: var(--hc-on-primary);
+  --md-sys-color-primary-container: var(--hc-primary-container);
+  --md-sys-color-on-primary-container: var(--hc-on-primary-container);
+
+  /* ----------------------------------------------------------
+     SECONDARY
+     ---------------------------------------------------------- */
+  --md-sys-color-secondary: var(--hc-secondary);
+  --md-sys-color-on-secondary: var(--hc-on-secondary);
+  --md-sys-color-secondary-container: var(--hc-secondary-container);
+  --md-sys-color-on-secondary-container: var(--hc-on-secondary-container);
+
+  /* ----------------------------------------------------------
+     TERTIARY
+     ---------------------------------------------------------- */
+  --md-sys-color-tertiary: var(--hc-tertiary);
+  --md-sys-color-on-tertiary: var(--hc-on-tertiary);
+  --md-sys-color-tertiary-container: var(--hc-tertiary-container);
+  --md-sys-color-on-tertiary-container: var(--hc-on-tertiary-container);
+
+  /* ----------------------------------------------------------
+     ERROR
+     ---------------------------------------------------------- */
+  --md-sys-color-error: var(--hc-error);
+  --md-sys-color-on-error: var(--hc-on-error);
+  --md-sys-color-error-container: var(--hc-error-container);
+  --md-sys-color-on-error-container: var(--hc-on-error-container);
+
+  /* ----------------------------------------------------------
+     SURFACE / BACKGROUND
+     ---------------------------------------------------------- */
+  --md-sys-color-surface: var(--hc-surface);
+  --md-sys-color-on-surface: var(--hc-on-surface);
+
+  --md-sys-color-surface-variant: var(--hc-surface-variant);
+  --md-sys-color-on-surface-variant: var(--hc-on-surface-variant);
+
+  --md-sys-color-background: var(--hc-background);
+  --md-sys-color-on-background: var(--hc-on-background);
+
+  /* ----------------------------------------------------------
+     OUTLINE / SHADOW / SCRIM
+     ---------------------------------------------------------- */
+  --md-sys-color-outline: var(--hc-outline);
+  --md-sys-color-outline-variant: var(--hc-outline-variant);
+
+  --md-sys-color-shadow: var(--hc-shadow);
+  --md-sys-color-scrim: var(--hc-scrim);
+
+  /* ----------------------------------------------------------
+     INVERSE COLORS
+     ---------------------------------------------------------- */
+  --md-sys-color-inverse-surface: var(--hc-inverse-surface);
+  --md-sys-color-inverse-on-surface: var(--hc-inverse-on-surface);
+  --md-sys-color-inverse-primary: var(--hc-inverse-primary);
+}

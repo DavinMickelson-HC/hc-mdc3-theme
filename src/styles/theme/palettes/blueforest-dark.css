@@ -1,0 +1,44 @@
+/* ============================================================
+   Blue + Forest — Dark Mode
+   ============================================================ */
+
+.blueforest.dark {
+  --hc-primary: #4fa3e3;
+  --hc-on-primary: #000000;
+  --hc-primary-container: #00335f;
+  --hc-on-primary-container: #ffffff;
+
+  --hc-secondary: #6fbf8a; /* Lightened forest green */
+  --hc-on-secondary: #000000;
+  --hc-secondary-container: #1f4a2c;
+  --hc-on-secondary-container: #ffffff;
+
+  --hc-tertiary: #b8e46a;
+  --hc-on-tertiary: #000000;
+  --hc-tertiary-container: #4f6a1a;
+  --hc-on-tertiary-container: #ffffff;
+
+  --hc-error: #ff7a8a;
+  --hc-on-error: #000000;
+  --hc-error-container: #7a0f1f;
+  --hc-on-error-container: #ffffff;
+
+  --hc-surface: #121212;
+  --hc-on-surface: #ffffff;
+
+  --hc-surface-variant: #3a3a3a;
+  --hc-on-surface-variant: #e0e0e0;
+
+  --hc-background: #121212;
+  --hc-on-background: #ffffff;
+
+  --hc-outline: #6f6f6f;
+  --hc-outline-variant: #3a3a3a;
+
+  --hc-shadow: rgba(0, 0, 0, 0.7);
+  --hc-scrim: rgba(0, 0, 0, 0.8);
+
+  --hc-inverse-surface: #e0e0e0;
+  --hc-inverse-on-surface: #000000;
+  --hc-inverse-primary: #44c8f5;
+}

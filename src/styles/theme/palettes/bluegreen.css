@@ -1,0 +1,51 @@
+/* ============================================================
+   Blue-Green Palette (Hennepin County Default)
+   ============================================================ */
+
+.bluegreen {
+  /* Primary */
+  --hc-primary: #0058a4; /* Hennepin Blue */
+  --hc-on-primary: #ffffff;
+  --hc-primary-container: #113c66; /* Deep Blue */
+  --hc-on-primary-container: #ffffff;
+
+  /* Secondary */
+  --hc-secondary: #9fcc3b; /* HC Green */
+  --hc-on-secondary: #000000;
+  --hc-secondary-container: #cbdb2a; /* Lime */
+  --hc-on-secondary-container: #000000;
+
+  /* Tertiary */
+  --hc-tertiary: #369ddb; /* Blue Accent */
+  --hc-on-tertiary: #ffffff;
+  --hc-tertiary-container: #673ab8; /* Deep Accent Blue */
+  --hc-on-tertiary-container: #ffffff;
+
+  /* Error */
+  --hc-error: #ce1432; /* Warm Red */
+  --hc-on-error: #ffffff;
+  --hc-error-container: #ef413d;
+  --hc-on-error-container: #ffffff;
+
+  /* Surface / Background */
+  --hc-surface: #ffffff;
+  --hc-on-surface: #000000;
+
+  --hc-surface-variant: #bcbec0;
+  --hc-on-surface-variant: #000000;
+
+  --hc-background: #ffffff;
+  --hc-on-background: #000000;
+
+  /* Outline / Shadow */
+  --hc-outline: #bcbec0;
+  --hc-outline-variant: #bcbec0;
+
+  --hc-shadow: rgba(0, 0, 0, 0.25);
+  --hc-scrim: rgba(0, 0, 0, 0.4);
+
+  /* Inverse */
+  --hc-inverse-surface: #000000;
+  --hc-inverse-on-surface: #ffffff;
+  --hc-inverse-primary: #44c8f5; /* Bright Blue */
+}

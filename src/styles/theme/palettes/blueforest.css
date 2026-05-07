@@ -1,0 +1,51 @@
+/* ============================================================
+   Blue + Forest Green Palette
+   ============================================================ */
+
+.blueforest {
+  /* Primary */
+  --hc-primary: #0058a4; /* Hennepin Blue */
+  --hc-on-primary: #ffffff;
+  --hc-primary-container: #113c66;
+  --hc-on-primary-container: #ffffff;
+
+  /* Secondary (Forest Green) */
+  --hc-secondary: #2e6b3f; /* Deep forest green */
+  --hc-on-secondary: #ffffff;
+  --hc-secondary-container: #4f8f5a; /* Softer forest green */
+  --hc-on-secondary-container: #000000;
+
+  /* Tertiary (Lime Accent) */
+  --hc-tertiary: #9fcc3b;
+  --hc-on-tertiary: #000000;
+  --hc-tertiary-container: #cbdb2a;
+  --hc-on-tertiary-container: #000000;
+
+  /* Error */
+  --hc-error: #ce1432;
+  --hc-on-error: #ffffff;
+  --hc-error-container: #ef413d;
+  --hc-on-error-container: #ffffff;
+
+  /* Surface / Background */
+  --hc-surface: #ffffff;
+  --hc-on-surface: #000000;
+
+  --hc-surface-variant: #bcbec0;
+  --hc-on-surface-variant: #000000;
+
+  --hc-background: #ffffff;
+  --hc-on-background: #000000;
+
+  /* Outline / Shadow */
+  --hc-outline: #bcbec0;
+  --hc-outline-variant: #d6d2ce;
+
+  --hc-shadow: rgba(0, 0, 0, 0.25);
+  --hc-scrim: rgba(0, 0, 0, 0.4);
+
+  /* Inverse */
+  --hc-inverse-surface: #000000;
+  --hc-inverse-on-surface: #ffffff;
+  --hc-inverse-primary: #44c8f5;
+}
